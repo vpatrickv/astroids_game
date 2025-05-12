@@ -45,7 +45,7 @@ def main():
             for shot in shots:
                 if shot.check_collision(astroid):
                     shot.kill()
-                    astroid.kill()
+                    astroid.split()
 
         # update screen
         #pygame.Surface.fill(screen, (0, 0, 0))
