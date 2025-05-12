@@ -41,6 +41,12 @@ def main():
                 print("Game over!")
                 sys.exit()
 
+        for astroid in asteroids:
+            for shot in shots:
+                if shot.check_collision(astroid):
+                    shot.kill()
+                    astroid.kill()
+
         # update screen
         #pygame.Surface.fill(screen, (0, 0, 0))
         screen.fill("black")
